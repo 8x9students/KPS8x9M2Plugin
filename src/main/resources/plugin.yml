@@ -1,0 +1,8 @@
+name: KPS8x9M2gamePlugin
+version: ${project.version}
+main: jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin
+api-version: 1.13
+commands:
+  m2test:
+    description: M2Test
+    usage: /m2test
