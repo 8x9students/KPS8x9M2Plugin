@@ -1,7 +1,10 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.GameStart;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public final class KPS8x9M2gamePlugin extends JavaPlugin {
 
@@ -14,7 +17,8 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         // コマンドをここに登録
         // plugin.yml への記載も忘れずに！
         // ----------------------------------------
-        this.getCommand("m2test").setExecutor(new M2TestCommand(this));
+        Objects.requireNonNull(this.getCommand("m2test")).setExecutor(new M2TestCommand(this));
+        Objects.requireNonNull(this.getCommand("start")).setExecutor(new GameStart());
 
         // ----------------------------------------
         // イベントリスナーをここに登録
@@ -26,6 +30,5 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
     public void onDisable() {
         getLogger().info(ClassUtil.getLogInfo());
         // Plugin shutdown logic
-
     }
 }

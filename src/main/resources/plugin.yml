@@ -6,3 +6,10 @@ commands:
   m2test:
     description: M2Test
     usage: /m2test
+  start:
+    description: 開始
+
+permissions:
+  itazura:
+    default: op
+
