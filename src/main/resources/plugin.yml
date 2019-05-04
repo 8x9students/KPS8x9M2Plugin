@@ -6,6 +6,8 @@ commands:
   m2test:
     description: M2Test
     usage: /m2test
+  start:
+    description: start
   mh:
     description: MH_command
     usage: /mh
