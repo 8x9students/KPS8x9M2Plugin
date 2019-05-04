@@ -32,7 +32,7 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         class PlayerDamageListener implements Listener {
             @EventHandler
             public void EntityDamage(EntityDamageByEntityEvent event){
-                  Entity Damager = event.getDamager();
+                  Entity damager = event.getDamager();
                     Entity entity = event.getEntity();
                      EntityDamageEvent.DamageCause cause = event.getCause();
                     System.out.println(entity);
@@ -77,18 +77,18 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
                                 break;
                             case ENTITY_ATTACK:
                                 String ena1 = "により";
-                                System.out.println(entity + ga + Damager + ena1 + Damage + damageuketa);
-                                Bukkit.broadcastMessage(entity + ga + Damager + ena1 + Damage + damageuketa);
+                                System.out.println(entity + ga + damager + ena1 + Damage + damageuketa);
+                                Bukkit.broadcastMessage(entity + ga + damager + ena1 + Damage + damageuketa);
                                 break;
                             case ENTITY_EXPLOSION:
                                 String ene1 = "による爆発により";
-                                System.out.println(entity + ga + Damager + ene1 + Damage + damageuketa);
-                                Bukkit.broadcastMessage(entity + ga + Damager + ene1 + Damage + damageuketa);
+                                System.out.println(entity + ga + damager + ene1 + Damage + damageuketa);
+                                Bukkit.broadcastMessage(entity + ga + damager + ene1 + Damage + damageuketa);
                                 break;
                             case ENTITY_SWEEP_ATTACK:
                                 String ens1 = "によるスイープ攻撃により";
-                                System.out.println(entity + ga + Damager + ens1 + Damage + damageuketa);
-                                Bukkit.broadcastMessage(entity + ga + Damager + ens1 + Damage + damageuketa);
+                                System.out.println(entity + ga + damager + ens1 + Damage + damageuketa);
+                                Bukkit.broadcastMessage(entity + ga + damager + ens1 + Damage + damageuketa);
                                 break;
                             case FALL:
                                 String fal1 = "落下したため";
