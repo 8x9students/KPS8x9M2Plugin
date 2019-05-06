@@ -3,6 +3,7 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 public final class KPS8x9M2gamePlugin extends JavaPlugin {
 
     @Override
