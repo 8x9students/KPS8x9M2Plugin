@@ -15,12 +15,15 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         // plugin.yml への記載も忘れずに！
         // ----------------------------------------
         this.getCommand("m2test").setExecutor(new M2TestCommand(this));
+        this.getCommand("mh").setExecutor(new MHCommand());
 
         // ----------------------------------------
         // イベントリスナーをここに登録
         // ----------------------------------------
         this.getServer().getPluginManager().registerEvents( new M2TestLoginListener(this), this);
+        this.getServer().getPluginManager().registerEvents( new PlayerDamageListener(this), this);
     }
+
 
     @Override
     public void onDisable() {
