@@ -1,15 +1,33 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import org.bukkit.Location;
+import org.bukkit.boss.BossBar;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
 public final class KPS8x9M2gamePlugin extends JavaPlugin {
 
+    public static BossBar bossbar;
+    public static Entity nexus_target;
+    public static FileConfiguration config;
+    public static int nexushp;
+
     @Override
     public void onEnable() {
         getLogger().info(ClassUtil.getLogInfo());
         // Plugin startup logic
+
+        // config.ymlが存在しない場合はファイルに出力します。
+        saveDefaultConfig();
+        // config.ymlを読み込みます。
+        config = getConfig();
+
+        //初期設定
+        nexushp=config.getInt("NexusHp");
 
         // ----------------------------------------
         // コマンドをここに登録

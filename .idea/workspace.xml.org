@@ -1,46 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-    <list default="true" id="5c5ec405-f257-4f73-aea9-d0cfb782c9fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_end.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_sethp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_setwave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_spawnpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_time.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_wavedown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_waveup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/PlayerDamageListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Gamestart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KPS8x9M2Plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KPS8x9M2Plugin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-    </list>
-=======
     <list default="true" id="243bc940-76ec-406b-a91a-d1fde682c44a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_secret.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/craftbukkit_1_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KPS8x9M2Plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KPS8x9M2Plugin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Gamestart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Harted.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
->>>>>>> Stashed changes:.idea/workspace.xml
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,216 +18,106 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-=======
-  <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1489963709">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="19" />
-          <entry key="project.open.time.0" value="14" />
-          <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="20" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="2" />
-          <entry key="iml" value="1" />
-          <entry key="java" value="14" />
-          <entry key="yml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="14" />
-          <entry key="YAML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="class" value="2" />
-          <entry key="java" value="1167" />
-          <entry key="yml" value="14" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="1167" />
-          <entry key="YAML" value="14" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
->>>>>>> Stashed changes:.idea/workspace.xml
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            <state relative-caret-position="105">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KPS8x9M2Plugin.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_time.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_wavedown.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-=======
-            <state relative-caret-position="-32">
-              <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
->>>>>>> Stashed changes:.idea/workspace.xml
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_waveup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
->>>>>>> Stashed changes:.idea/workspace.xml
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_spawnpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="75">
+              <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/plugin/java/JavaPlugin.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_setwave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4896">
-              <caret line="336" column="17" selection-start-line="336" selection-start-column="11" selection-end-line="336" selection-end-column="17" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_secret.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Harted.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="38" column="57" lean-forward="true" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_sethp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1136">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
->>>>>>> Stashed changes:.idea/workspace.xml
-              <folding>
-                <element signature="e#10049#10050#0" expanded="true" />
-                <element signature="e#10078#10079#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/ClassUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -277,36 +137,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-=======
         <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2CommandTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/ClassUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestLoginListener.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/secret.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_inventorycontroll.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestLoginListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/ClassUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_change.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Gamestart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_secret.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Harted.java" />
->>>>>>> Stashed changes:.idea/workspace.xml
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_wavedown.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_end.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_sethp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_setwave.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_spawnpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_waveup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_time.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java" />
       </list>
     </option>
   </component>
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="1850" />
-    <option name="height" value="1776" />
-=======
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -316,55 +167,27 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="975" />
+    <option name="width" value="1280" />
+    <option name="height" value="739" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Probable bugsJava</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>EqualsBetweenInconvertibleTypes</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
->>>>>>> Stashed changes:.idea/workspace.xml
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="KPS8x9M2Plugin" type="b2602c69:ProjectViewProjectNode" />
               <item name="KPS8x9M2Plugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KPS8x9M2Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KPS8x9M2Plugin" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KPS8x9M2Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KPS8x9M2Plugin" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KPS8x9M2Plugin" type="b2602c69:ProjectViewProjectNode" />
@@ -406,8 +229,6 @@
               <item name="KPS8x9M2Plugin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-=======
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kps8x9m2gameplugin" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
@@ -417,14 +238,7 @@
               <item name="KPS8x9M2Plugin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
->>>>>>> Stashed changes:.idea/workspace.xml
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KPS8x9M2Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KPS8x9M2Plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KPS8x9M2Plugin" type="b2602c69:ProjectViewProjectNode" />
@@ -435,35 +249,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557132539131" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556962954983" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2764505" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
-=======
-      <pane id="AndroidView" />
-    </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557144880791" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="jp.kps8x9.middle2.kps8x9m2gameplugin" />
     </key>
->>>>>>> Stashed changes:.idea/workspace.xml
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -510,54 +308,45 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5c5ec405-f257-4f73-aea9-d0cfb782c9fb" name="Default Changelist" comment="" />
+      <changelist id="243bc940-76ec-406b-a91a-d1fde682c44a" name="Default Changelist" comment="" />
       <created>1556340002648</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556340002648</updated>
     </task>
+    <task id="LOCAL-00001" summary="コマンドの処理する場所を追加">
+      <created>1556960823360</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556960823360</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-    <frame x="-6" y="-6" width="1381" height="895" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27210885" />
-=======
-    <frame x="0" y="23" width="1680" height="975" extended-state="1" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17916666" />
->>>>>>> Stashed changes:.idea/workspace.xml
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
-<<<<<<< Updated upstream:.idea/workspace.xml.org
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49962208" weight="0.32941177" />
-=======
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49840763" visible="true" weight="0.32978722" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49716598" visible="true" weight="0.32743362" />
->>>>>>> Stashed changes:.idea/workspace.xml
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22839506" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5011338" side_tool="true" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4988662" visible="true" weight="0.32941177" />
-=======
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5017857" side_tool="true" weight="0.32826087" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49821427" weight="0.32826087" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49959514" weight="0.32867134" />
->>>>>>> Stashed changes:.idea/workspace.xml
+      <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -568,109 +357,155 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Flutter Inspector" order="8" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="10" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'master' of https://github.com/8x9students/KPS8x9M2Plugin&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/8x9students/KPS8x9M2Plugin&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="コマンドの処理する場所を追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="コマンドの処理する場所を追加" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/ClassUtil.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="210">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KPS8x9M2Plugin.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/event/player/PlayerJoinEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/event/player/PlayerLoginEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/plugin/java/JavaPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="336" column="17" selection-start-line="336" selection-start-column="11" selection-end-line="336" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/ClassUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestLoginListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        <state relative-caret-position="242">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-=======
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
->>>>>>> Stashed changes:.idea/workspace.xml
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml~267c359737bd4c70bb19ce9191059e5545ba8811" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/event/player/PlayerJoinEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/event/player/PlayerLoginEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_end.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_sethp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="517" column="10" selection-start-line="517" selection-start-column="10" selection-end-line="517" selection-end-column="10" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_setwave.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_spawnpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KPS8x9M2Plugin.iml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_waveup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_wavedown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/GameStart.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/secret.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_inventorycontroll.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_change.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Gamestart.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestLoginListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -679,81 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
->>>>>>> Stashed changes:.idea/workspace.xml
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/plugin/java/JavaPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4896">
-          <caret line="336" column="17" selection-start-line="336" selection-start-column="11" selection-end-line="336" selection-end-column="17" />
-=======
-    <entry file="file://$PROJECT_DIR$/KPS8x9M2Plugin.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/ClassUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/M2TestCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
->>>>>>> Stashed changes:.idea/workspace.xml
-          <folding>
-            <element signature="e#10049#10050#0" expanded="true" />
-            <element signature="e#10078#10079#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_wavedown.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_sethp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_secret.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
->>>>>>> Stashed changes:.idea/workspace.xml
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/KPS8x9M2gamePlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream:.idea/workspace.xml.org
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-=======
-        <state relative-caret-position="-1136">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -762,19 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/MHcommand/MH_start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jp/kps8x9/middle2/kps8x9m2gameplugin/util/Harted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="38" column="57" lean-forward="true" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
->>>>>>> Stashed changes:.idea/workspace.xml
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -821,11 +572,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2764505" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -833,7 +584,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Minecraftworkspace.xml|KPS8x9M2Plugin</last-edited>
+          <last-edited>KPS8x9M2Plugin</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -845,11 +596,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.yaml:snakeyaml:1.23</last-edited>
+          <last-edited>spigot</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2764505" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

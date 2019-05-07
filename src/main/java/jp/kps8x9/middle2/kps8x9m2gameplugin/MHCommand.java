@@ -32,7 +32,7 @@ public class MHCommand implements CommandExecutor {
             switch (args[0].toLowerCase()) {
                 //それぞれのクラスへ移動
                 case "start":
-                    new MH_start();
+                    new MH_start(((Player) sender).getWorld());
                     break;
                 case "end":
                     ret = new MH_end(this.plg).onCommand(sender, command, label, args);
