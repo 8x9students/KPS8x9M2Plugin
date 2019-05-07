@@ -1,6 +1,7 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand.*;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,9 +9,25 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class MHCommand implements CommandExecutor {
+    private final KPS8x9M2gamePlugin plg;
+
+    /**
+     * コンストラクタ
+     * @param plg_  プラグインメインクラスのインスタンス
+     */
+    public MHCommand(KPS8x9M2gamePlugin plg_) {
+        plg = plg_;
+        plg.getLogger().info(ClassUtil.getLogInfo() + " enabled.");
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!(sender instanceof Player)) return false;
+        if(!(sender instanceof Player)) {
+            return false;
+        }
+
+        boolean ret = false;
+
         if(args.length==1) {
             switch (args[0].toLowerCase()) {
                 //それぞれのクラスへ移動
@@ -18,7 +35,7 @@ public class MHCommand implements CommandExecutor {
                     new MH_start();
                     break;
                 case "end":
-                    new MH_end();
+                    ret = new MH_end(this.plg).onCommand(sender, command, label, args);
                     break;
                 case "waveup":
                     new MH_waveup();
@@ -69,6 +86,7 @@ public class MHCommand implements CommandExecutor {
         }else{
             sender.sendMessage(ChatColor.RED+"/mh 内容");
         }
-        return false;
+
+        return ret;
     }
 }
