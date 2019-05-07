@@ -1,6 +1,7 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.Scouter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -23,6 +24,7 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         // ----------------------------------------
         this.getServer().getPluginManager().registerEvents( new M2TestLoginListener(this), this);
         this.getServer().getPluginManager().registerEvents( new PlayerDamageListener(this), this);
+        this.getServer().getPluginManager().registerEvents( new Scouter(), this);
     }
 
 

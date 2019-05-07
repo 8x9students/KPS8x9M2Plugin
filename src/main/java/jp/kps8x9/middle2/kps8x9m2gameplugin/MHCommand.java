@@ -43,6 +43,9 @@ public class MHCommand implements CommandExecutor {
                 case "wavedown":
                     new MH_wavedown();
                     break;
+                case "scouter":
+                    new MH_scouter((Player)sender);
+                    break;
                 default:
                     sender.sendMessage(ChatColor.RED+"/mh 内容");
                     break;
