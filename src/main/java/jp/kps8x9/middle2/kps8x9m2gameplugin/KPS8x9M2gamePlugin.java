@@ -2,6 +2,7 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.Event.NexusDamage;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.Scouter;
 import org.bukkit.Location;
 import org.bukkit.boss.BossBar;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -46,6 +47,7 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents( new M2TestLoginListener(this), this);
         this.getServer().getPluginManager().registerEvents( new PlayerDamageListener(this), this);
         this.getServer().getPluginManager().registerEvents( new NexusDamage(this), this);
+        this.getServer().getPluginManager().registerEvents( new Scouter(), this);
     }
 
 
