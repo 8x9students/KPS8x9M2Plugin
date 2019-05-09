@@ -22,11 +22,15 @@ public class Scouter implements Listener {
                 if(entity.getType()== EntityType.PLAYER){
                     Player target = (Player)entity;
                     Location location = player.getLocation();
+                    int kills = player.getStatistic(Statistic.MOB_KILLS);
+                    int damage = player.getStatistic(Statistic.DAMAGE_DEALT);
+                    int guard = player.getStatistic(Statistic.DAMAGE_RESISTED);
+                    int shield = player.getStatistic(Statistic.DAMAGE_BLOCKED_BY_SHIELD);
                     double helth = target.getHealth();
                     double food = target.getFoodLevel();
                     double exp = target.getLevel();
-                    double fightlebel = helth*food*exp;
-                    if(fightlebel>=5000){
+                    double fightlebel = helth*food*exp+kills*damage+guard*shield;
+                    if(fightlebel>=600000){
                         player.getWorld().spawnParticle(Particle.EXPLOSION_NORMAL,location.getX(),location.getY(),location.getZ(),1,0,0,0);
                     }
                     player.sendMessage(ChatColor.GREEN+target.getDisplayName()+"の戦闘力は"+ChatColor.RED+fightlebel+"です");
