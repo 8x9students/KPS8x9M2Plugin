@@ -11,7 +11,9 @@ import org.bukkit.inventory.PlayerInventory;
 import static jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin.*;
 
 public class MH_start {
-    public MH_start(World w) {
+    public int wave = 1;
+    public MH_start(World w, int wave_) {
+        this.wave = wave_;
         try {
             nexus = (LivingEntity) w.spawnEntity(new Location(w, config.getDouble("NexusLocation.x"), config.getDouble("NexusLocation.y"), config.getDouble("NexusLocation.z")), EntityType.CREEPER);
             nexus.setAI(false);
