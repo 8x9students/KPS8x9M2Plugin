@@ -6,3 +6,5 @@ commands:
   m2test:
     description: M2Test
     usage: /m2test
+  finsh:
+    usge: /finish

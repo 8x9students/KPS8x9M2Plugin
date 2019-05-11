@@ -15,6 +15,7 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         // plugin.yml への記載も忘れずに！
         // ----------------------------------------
         this.getCommand("m2test").setExecutor(new M2TestCommand(this));
+        this.getCommand("finish").setExecutor(new FinishEvent(this));
 
         // ----------------------------------------
         // イベントリスナーをここに登録
