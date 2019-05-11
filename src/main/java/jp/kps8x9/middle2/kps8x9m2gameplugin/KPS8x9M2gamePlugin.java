@@ -11,13 +11,11 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
 
 
 public final class KPS8x9M2gamePlugin extends JavaPlugin {
-
-    public static BossBar bossbar;//ネクサスのHPバー
-    public static LivingEntity nexus;//ネクサス
-    public static double nexushp;//ネクサスのHP
 
     public static FileConfiguration config;//コンフィグ
 
@@ -31,22 +29,20 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         // config.ymlを読み込みます。
         config = getConfig();
 
-        //初期設定
-        nexushp=config.getDouble("NexusHp");
-
         // ----------------------------------------
         // コマンドをここに登録
         // plugin.yml への記載も忘れずに！
         // ----------------------------------------
+        MHCommand cmd=new MHCommand(this);
         this.getCommand("m2test").setExecutor(new M2TestCommand(this));
-        this.getCommand("mh").setExecutor(new MHCommand(this));
+        this.getCommand("mh").setExecutor(cmd);
 
         // ----------------------------------------
         // イベントリスナーをここに登録
         // ----------------------------------------
         this.getServer().getPluginManager().registerEvents( new M2TestLoginListener(this), this);
         this.getServer().getPluginManager().registerEvents( new PlayerDamageListener(this), this);
-        this.getServer().getPluginManager().registerEvents( new NexusDamage(this), this);
+        this.getServer().getPluginManager().registerEvents( new NexusDamage(this,cmd), this);
         this.getServer().getPluginManager().registerEvents( new Scouter(), this);
     }
 

@@ -3,3 +3,6 @@ NexusLocation:
   y:
   z:
 NexusHp:
+NexusTimer:
+  Minute:
+  Second:

@@ -1,27 +1,48 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand;
 
+import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.MHCommand;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
 import org.bukkit.*;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.scheduler.BukkitRunnable;
+
 import static jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin.*;
 
 public class MH_start {
-    public int wave = 1;
-    public MH_start(World w, int wave_) {
-        this.wave = wave_;
+    private final KPS8x9M2gamePlugin plg;
+    private final MHCommand cmd;
+
+    public MH_start(KPS8x9M2gamePlugin plg,MHCommand cmd) {
+        this.plg=plg;
+        this.cmd=cmd;
+        cmd.minute=config.getInt("NexusTimer.Minute");
+        cmd.second=config.getInt("NexusTimer.Second");
+    }
+
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        plg.getLogger().info(ClassUtil.getLogInfo());
+
+        cmd.wave=Integer.parseInt(args[1]);
+        boolean ret=false;
+
         try {
-            nexus = (LivingEntity) w.spawnEntity(new Location(w, config.getDouble("NexusLocation.x"), config.getDouble("NexusLocation.y"), config.getDouble("NexusLocation.z")), EntityType.CREEPER);
-            nexus.setAI(false);
-            nexus.setMaxHealth(nexushp);
-            nexus.setHealth(nexushp);
+            World w=((Player)sender).getWorld();
+            cmd.nexus = (LivingEntity) w.spawnEntity(new Location(w, config.getDouble("NexusLocation.x"), config.getDouble("NexusLocation.y"), config.getDouble("NexusLocation.z")), EntityType.CREEPER);
+            cmd.nexus.setAI(false);
+            cmd.nexus.setMaxHealth(cmd.nexushp);
+            cmd.nexus.setHealth(cmd.nexushp);
         }catch(Exception e){
             e.printStackTrace();
-            return;
+            return false;
         }
 
         ItemStack sword = new ItemStack(Material.IRON_SWORD);
@@ -52,15 +73,39 @@ public class MH_start {
             player.updateInventory();
         }
 
-        bossbar=Bukkit.createBossBar(ChatColor.RED+"NEXUS HP", BarColor.PURPLE, BarStyle.SOLID);
-        bossbar.setProgress(1.0);
-        Bukkit.getOnlinePlayers().forEach(p->bossbar.addPlayer(p));
+        cmd.bossbar=Bukkit.createBossBar(ChatColor.RED+"NEXUS HP", BarColor.PURPLE, BarStyle.SOLID);
+        cmd.bossbar.setProgress(1.0);
+        Bukkit.getOnlinePlayers().forEach(p->cmd.bossbar.addPlayer(p));
+
+        //タイマー起動
+        cmd.timer=new BukkitRunnable() {
+            @Override
+            public void run() {
+                cmd.second--;
+                if(cmd.second<0) {
+                    cmd.second=59;
+                    cmd.minute--;
+                }else if(cmd.second==0&&cmd.minute==0) {
+                    cmd.finish();
+                    cancel();
+                }
+            }
+        }.runTaskTimer(plg,20,20);
+
+        ret=true;
+        return ret;
     }
 
     public void waveDown(){ //waveを上げる
-        this.wave--;
+        cmd.wave--;
     }
     public void waveUp(){ //waveを下げる
-        this.wave++;
+        cmd.wave++;
+    }
+
+    public void setWave(int wave){ //waveを設定する
+        if(wave<0)
+            wave=1;
+        cmd.wave=wave;
     }
 }
