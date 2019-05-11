@@ -39,10 +39,14 @@ public class MHCommand implements CommandExecutor {
                     ret = new MH_end(this.plg, this).onCommand(sender, command, label, args);
                     break;
                 case "waveup":
-                    mh.waveUp();
+                    if(sender.isOp()) {
+                        mh.waveUp();
+                    }
                     break;
                 case "wavedown":
-                    mh.waveDown();
+                    if(sender.isOp()) {
+                        mh.waveDown();
+                    }
                     break;
                 case "scouter":
                     new MH_scouter((Player)sender);
