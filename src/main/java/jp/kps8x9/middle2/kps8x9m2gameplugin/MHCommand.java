@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 
 public class MHCommand implements CommandExecutor {
     private final KPS8x9M2gamePlugin plg;
+    MH_start mh;
 
     /**
      * コンストラクタ
@@ -32,16 +33,16 @@ public class MHCommand implements CommandExecutor {
             switch (args[0].toLowerCase()) {
                 //それぞれのクラスへ移動
                 case "start":
-                    new MH_start(((Player) sender).getWorld());
+                    mh = new MH_start(((Player) sender).getWorld(), 1);
                     break;
                 case "end":
-                    ret = new MH_end(this.plg).onCommand(sender, command, label, args);
+                    ret = new MH_end(this.plg, this).onCommand(sender, command, label, args);
                     break;
                 case "waveup":
-                    new MH_waveup();
+                    new MH_waveup(mh);
                     break;
                 case "wavedown":
-                    new MH_wavedown();
+                    new MH_wavedown(mh);
                     break;
                 case "scouter":
                     new MH_scouter((Player)sender);

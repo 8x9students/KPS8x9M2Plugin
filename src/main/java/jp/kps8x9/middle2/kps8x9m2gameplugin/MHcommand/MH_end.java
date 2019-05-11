@@ -1,6 +1,7 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.MHCommand;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.boss.BarColor;
@@ -14,14 +15,16 @@ import static jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin.*;
 
 public class MH_end {
     private final KPS8x9M2gamePlugin plg;
+    private final MHCommand cmd;
     private int color_num;
 
     /**
      * コンストラクタ
      * @param plg_  プラグインメインクラスのインスタンス
      */
-    public MH_end(KPS8x9M2gamePlugin plg_) {
+    public MH_end(KPS8x9M2gamePlugin plg_, MHCommand cmd_) {
         plg = plg_;
+        cmd = cmd_;
 
         bossbar.setProgress(1.0);
 
