@@ -16,6 +16,7 @@ import static jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin.*;
 public class MH_end {
     private final KPS8x9M2gamePlugin plg;
     private final MHCommand cmd;
+
     private int color_num;
 
     /**
@@ -25,33 +26,6 @@ public class MH_end {
     public MH_end(KPS8x9M2gamePlugin plg_, MHCommand cmd_) {
         plg = plg_;
         cmd = cmd_;
-
-        bossbar.setProgress(1.0);
-
-        StringBuilder title=new StringBuilder()
-                .append(ChatColor.RED).append("F")
-                .append(ChatColor.YELLOW).append("I")
-                .append(ChatColor.GREEN).append("N")
-                .append(ChatColor.BLUE).append("I")
-                .append(ChatColor.LIGHT_PURPLE).append("S")
-                .append(ChatColor.DARK_PURPLE).append("H");
-
-        bossbar.setTitle(title.toString());
-        finish();
-    }
-
-    private void finish(){
-        BarColor[] colors=BarColor.values();
-        color_num=0;
-        new BukkitRunnable(){
-            @Override
-            public void run() {
-                bossbar.setColor(colors[color_num]);
-                color_num++;
-                if(color_num>=colors.length)
-                    color_num=0;
-            }
-        }.runTaskTimer(plg,4,4);
     }
 
     /**
@@ -67,8 +41,36 @@ public class MH_end {
 
         boolean ret = false;
 
-        // todo:
+        // End処理
+        bossbar.setProgress(1.0);
 
+        StringBuilder title=new StringBuilder()
+                .append(ChatColor.RED).append("F")
+                .append(ChatColor.YELLOW).append("I")
+                .append(ChatColor.GREEN).append("N")
+                .append(ChatColor.BLUE).append("I")
+                .append(ChatColor.LIGHT_PURPLE).append("S")
+                .append(ChatColor.DARK_PURPLE).append("H");
+
+        bossbar.setTitle(title.toString());
+
+        finish();
+
+        ret = true;
         return ret;
+    }
+
+    private void finish(){
+        BarColor[] colors=BarColor.values();
+        color_num=0;
+        new BukkitRunnable(){
+            @Override
+            public void run() {
+                bossbar.setColor(colors[color_num]);
+                color_num++;
+                if(color_num>=colors.length)
+                    color_num=0;
+            }
+        }.runTaskTimer(plg,4,4);
     }
 }
