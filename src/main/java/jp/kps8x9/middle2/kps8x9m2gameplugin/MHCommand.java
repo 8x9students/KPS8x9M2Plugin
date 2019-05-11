@@ -39,14 +39,16 @@ public class MHCommand implements CommandExecutor {
                     ret = new MH_end(this.plg, this).onCommand(sender, command, label, args);
                     break;
                 case "waveup":
-                    new MH_waveup(mh);
+                    mh.waveUp();
                     break;
                 case "wavedown":
-                    new MH_wavedown(mh);
+                    mh.waveDown();
                     break;
                 case "scouter":
                     new MH_scouter((Player)sender);
                     break;
+                case "wave":
+                    sender.sendMessage(ChatColor.LIGHT_PURPLE+"WAVE "+mh.wave+" !!");
                 default:
                     sender.sendMessage(ChatColor.RED+"/mh 内容");
                     break;

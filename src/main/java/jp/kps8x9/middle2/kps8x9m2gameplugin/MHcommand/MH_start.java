@@ -56,4 +56,11 @@ public class MH_start {
         bossbar.setProgress(1.0);
         Bukkit.getOnlinePlayers().forEach(p->bossbar.addPlayer(p));
     }
+
+    public void waveDown(){ //waveを上げる
+        this.wave--;
+    }
+    public void waveUp(){ //waveを下げる
+        this.wave++;
+    }
 }
