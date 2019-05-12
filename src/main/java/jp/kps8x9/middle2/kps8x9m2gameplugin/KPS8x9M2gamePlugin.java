@@ -2,6 +2,7 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.Event.NexusDamage;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.Scouter;
 import org.bukkit.Location;
 import org.bukkit.boss.BossBar;

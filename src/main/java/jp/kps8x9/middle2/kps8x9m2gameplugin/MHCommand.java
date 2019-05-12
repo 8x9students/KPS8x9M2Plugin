@@ -2,29 +2,16 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand.*;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
 import org.bukkit.ChatColor;
-import org.bukkit.boss.BarColor;
-import org.bukkit.boss.BossBar;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
-import static jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin.*;
 
 public class MHCommand implements CommandExecutor {
     public final KPS8x9M2gamePlugin plg;
-    public int wave;
-    public BossBar bossbar;//ネクサスのHPバー
-    public LivingEntity nexus;//ネクサス
-    public double nexushp;//ネクサスのHP
-    public BukkitTask timer;//タイマー
-    public int minute;//分
-    public int second;//秒
-    private int color_num;
-    MH_start mh=null;
+    private MHGame mhGame;
 
     /**
      * コンストラクタ
@@ -34,38 +21,7 @@ public class MHCommand implements CommandExecutor {
         plg = plg_;
         plg.getLogger().info(ClassUtil.getLogInfo() + " enabled.");
 
-        nexushp=config.getDouble("NexusHp");
-    }
-
-    public void finish(){
-        if(!nexus.isDead())
-            nexus.setHealth(0);
-
-        bossbar.setProgress(1.0);
-
-        //cmd.timer.cancel();
-
-        StringBuilder title=new StringBuilder()
-                .append(ChatColor.RED).append("F")
-                .append(ChatColor.YELLOW).append("I")
-                .append(ChatColor.GREEN).append("N")
-                .append(ChatColor.BLUE).append("I")
-                .append(ChatColor.LIGHT_PURPLE).append("S")
-                .append(ChatColor.DARK_PURPLE).append("H");
-
-        bossbar.setTitle(title.toString());
-
-        BarColor[] colors=BarColor.values();
-        color_num=0;
-        new BukkitRunnable(){
-            @Override
-            public void run() {
-                bossbar.setColor(colors[color_num]);
-                color_num++;
-                if(color_num>=colors.length)
-                    color_num=0;
-            }
-        }.runTaskTimer(plg,4,4);
+        mhGame=MHGame.getInstance();
     }
 
     @Override
@@ -84,18 +40,20 @@ public class MHCommand implements CommandExecutor {
                         ret = new MH_end(this.plg, this).onCommand(sender, command, label, args);
                         break;
                     case "waveup":
-                        if (sender.isOp() && mh != null)
-                            mh.waveUp();
+                        if (sender.isOp() && mhGame != null) {
+                            mhGame.waveUp();
+                        }
                         break;
                     case "wavedown":
-                        if (sender.isOp() && mh != null)
-                            mh.waveDown();
+                        if (sender.isOp() && mhGame != null) {
+                            mhGame.waveDown();
+                        }
                         break;
                     case "scouter":
                         ret=new MH_scouter(plg,this).onCommand(sender,command,label,args);
                         break;
                     case "wave":
-                        sender.sendMessage(ChatColor.LIGHT_PURPLE + "WAVE " + wave + " !!");
+                        sender.sendMessage(ChatColor.LIGHT_PURPLE + "WAVE " + mhGame.wave + " !!");
                     default:
                         sender.sendMessage(ChatColor.RED + "/mh 内容");
                         break;
@@ -104,15 +62,15 @@ public class MHCommand implements CommandExecutor {
                 switch (args[0].toLowerCase()) {
                     //それぞれのクラスへ移動
                     case "start":
-                        mh = new MH_start(plg,this);
-                        ret=mh.onCommand(sender, command, label, args);
+                        ret=new MH_start(plg,this).onCommand(sender, command, label, args);
                         break;
                     case "sethp":
                         ret=new MH_sethp(plg,this).onCommand(sender,command,label,args);
                         break;
                     case "setwave":
-                        if (sender.isOp() && mh != null)
-                            mh.setWave(Integer.parseInt(args[1]));
+                        if (sender.isOp() && mhGame != null) {
+                            mhGame.setWave(Integer.parseInt(args[1]));
+                        }
                         break;
                     default:
                         sender.sendMessage(ChatColor.RED + "/mh 内容");

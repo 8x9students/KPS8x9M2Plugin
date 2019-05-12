@@ -3,6 +3,7 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.MHCommand;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
 import org.bukkit.*;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
@@ -13,33 +14,34 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import static jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin.*;
 
 public class MH_start {
     private final KPS8x9M2gamePlugin plg;
     private final MHCommand cmd;
+    private final MHGame mhGame;
 
     public MH_start(KPS8x9M2gamePlugin plg,MHCommand cmd) {
         this.plg=plg;
         this.cmd=cmd;
-        cmd.minute=config.getInt("NexusTimer.Minute");
-        cmd.second=config.getInt("NexusTimer.Second");
+        mhGame=MHGame.getInstance();
+        mhGame.second=config.getInt("NexusTimer.Second")+config.getInt("NexusTimer.Minute")*60;
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         plg.getLogger().info(ClassUtil.getLogInfo());
 
-        cmd.wave=Integer.parseInt(args[1]);
+        mhGame.wave=Integer.parseInt(args[1]);
         boolean ret=false;
 
         try {
             World w=((Player)sender).getWorld();
-            cmd.nexus = (LivingEntity) w.spawnEntity(new Location(w, config.getDouble("NexusLocation.x"), config.getDouble("NexusLocation.y"), config.getDouble("NexusLocation.z")), EntityType.CREEPER);
-            cmd.nexus.setAI(false);
-            cmd.nexus.setMaxHealth(cmd.nexushp);
-            cmd.nexus.setHealth(cmd.nexushp);
+            mhGame.nexus = (LivingEntity) w.spawnEntity(new Location(w, config.getDouble("NexusLocation.x"), config.getDouble("NexusLocation.y"), config.getDouble("NexusLocation.z")), EntityType.CREEPER);
+            mhGame.nexus.setAI(false);
+            int hp=config.getInt("NexusHp");
+            mhGame.nexus.setMaxHealth(hp);
+            mhGame.nexus.setHealth(hp);
         }catch(Exception e){
             e.printStackTrace();
             return false;
@@ -73,39 +75,13 @@ public class MH_start {
             player.updateInventory();
         }
 
-        cmd.bossbar=Bukkit.createBossBar(ChatColor.RED+"NEXUS HP", BarColor.PURPLE, BarStyle.SOLID);
-        cmd.bossbar.setProgress(1.0);
-        Bukkit.getOnlinePlayers().forEach(p->cmd.bossbar.addPlayer(p));
+        mhGame.startTimer(plg);
 
-        //タイマー起動
-        cmd.timer=new BukkitRunnable() {
-            @Override
-            public void run() {
-                cmd.second--;
-                if(cmd.second<0) {
-                    cmd.second=59;
-                    cmd.minute--;
-                }else if(cmd.second==0&&cmd.minute==0) {
-                    cmd.finish();
-                    cancel();
-                }
-            }
-        }.runTaskTimer(plg,20,20);
+        mhGame.bossbar=Bukkit.createBossBar(ChatColor.RED+"NEXUS HP", BarColor.PURPLE, BarStyle.SOLID);
+        mhGame.bossbar.setProgress(1.0);
+        Bukkit.getOnlinePlayers().forEach(p->mhGame.bossbar.addPlayer(p));
 
         ret=true;
         return ret;
-    }
-
-    public void waveDown(){ //waveを上げる
-        cmd.wave--;
-    }
-    public void waveUp(){ //waveを下げる
-        cmd.wave++;
-    }
-
-    public void setWave(int wave){ //waveを設定する
-        if(wave<0)
-            wave=1;
-        cmd.wave=wave;
     }
 }
