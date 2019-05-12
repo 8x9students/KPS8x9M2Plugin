@@ -22,14 +22,11 @@ public class Scouter implements Listener {
                 if(entity.getType()== EntityType.PLAYER){
                     Player target = (Player)entity;
                     Location location = player.getLocation();
-                    int kills = player.getStatistic(Statistic.MOB_KILLS);
-                    int damage = player.getStatistic(Statistic.DAMAGE_DEALT);
-                    int guard = player.getStatistic(Statistic.DAMAGE_RESISTED);
-                    int shield = player.getStatistic(Statistic.DAMAGE_BLOCKED_BY_SHIELD);
-                    double helth = target.getHealth();
-                    double food = target.getFoodLevel();
-                    double exp = target.getLevel();
-                    double fightlebel = helth*food*exp+kills*damage+guard*shield;
+                    double kills = target.getStatistic(Statistic.MOB_KILLS)+target.getStatistic(Statistic.PLAYER_KILLS);
+                    double cp = target.getFoodLevel()*target.getHealth();
+                    double killCp = cp*kills*target.getStatistic(Statistic.DAMAGE_DEALT);
+                    double guardCp = cp*target.getStatistic(Statistic.DAMAGE_RESISTED)*target.getStatistic(Statistic.DAMAGE_BLOCKED_BY_SHIELD);
+                    double fightlebel = cp+killCp+guardCp;
                     if(fightlebel>=600000){
                         player.getWorld().spawnParticle(Particle.EXPLOSION_NORMAL,location.getX(),location.getY(),location.getZ(),1,0,0,0);
                     }

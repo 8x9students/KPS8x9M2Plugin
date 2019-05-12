@@ -46,7 +46,6 @@ public class MH_start {
             e.printStackTrace();
             return false;
         }
-
         ItemStack sword = new ItemStack(Material.IRON_SWORD);
         ItemStack shield = new ItemStack(Material.SHIELD);
         ItemStack gapple = new ItemStack(Material.GOLDEN_APPLE, 3);
