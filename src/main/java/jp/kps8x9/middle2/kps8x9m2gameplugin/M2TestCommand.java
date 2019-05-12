@@ -1,6 +1,7 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.LogUtil;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -10,7 +11,8 @@ public class M2TestCommand implements CommandExecutor {
 
     /**
      * コンストラクタ
-     * @param plg_  プラグインメインクラスのインスタンス
+     *
+     * @param plg_ プラグインメインクラスのインスタンス
      */
     public M2TestCommand(KPS8x9M2gamePlugin plg_) {
         plg = plg_;
@@ -19,6 +21,7 @@ public class M2TestCommand implements CommandExecutor {
 
     /**
      * コマンド処理
+     *
      * @param sender
      * @param command
      * @param label
@@ -30,12 +33,11 @@ public class M2TestCommand implements CommandExecutor {
         plg.getLogger().info(ClassUtil.getLogInfo() + "sender=" + sender);
         plg.getLogger().info(ClassUtil.getLogInfo() + "command=" + command);
         plg.getLogger().info(ClassUtil.getLogInfo() + "label=" + label);
-        plg.getLogger().info(ClassUtil.getLogInfo() + "args=" + args);
+        plg.getLogger().info(ClassUtil.getLogInfo() + "args=" + LogUtil.arrayToString(args));
 
         // ----------------------------------------
         // ここから処理
         // ----------------------------------------
-
 
 
         // ----------------------------------------
