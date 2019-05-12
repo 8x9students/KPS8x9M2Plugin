@@ -1,7 +1,7 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand.*;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.commons.util.ClassUtil;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

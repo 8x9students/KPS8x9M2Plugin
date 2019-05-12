@@ -2,7 +2,7 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.MHCommand;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.commons.util.ClassUtil;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
 import org.bukkit.*;
 import org.bukkit.boss.BarColor;

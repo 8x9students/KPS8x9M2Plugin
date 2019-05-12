@@ -1,15 +1,10 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.Event.NexusDamage;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
+import jp.kps8x9.commons.util.ClassUtil;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.Scouter;
-import org.bukkit.boss.BossBar;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
 
 
 public final class KPS8x9M2gamePlugin extends JavaPlugin {

@@ -1,4 +1,4 @@
-package jp.kps8x9.middle2.kps8x9m2gameplugin.util;
+package jp.kps8x9.commons.util;
 
 public class ClassUtil {
 

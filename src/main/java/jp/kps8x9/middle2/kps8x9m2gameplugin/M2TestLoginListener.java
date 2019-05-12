@@ -1,6 +1,6 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
+import jp.kps8x9.commons.util.ClassUtil;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;

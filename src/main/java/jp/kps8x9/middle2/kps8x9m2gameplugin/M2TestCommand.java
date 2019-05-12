@@ -1,7 +1,7 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ClassUtil;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.LogUtil;
+import jp.kps8x9.commons.util.ClassUtil;
+import jp.kps8x9.commons.util.LogUtil;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
