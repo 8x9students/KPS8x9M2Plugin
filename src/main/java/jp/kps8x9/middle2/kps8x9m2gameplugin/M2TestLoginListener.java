@@ -11,7 +11,8 @@ public class M2TestLoginListener implements Listener {
 
     /**
      * コンストラクタ
-     * @param plg_  プラグインメインクラスのインスタンス
+     *
+     * @param plg_ プラグインメインクラスのインスタンス
      */
     public M2TestLoginListener(KPS8x9M2gamePlugin plg_) {
         plg = plg_;
@@ -21,6 +22,7 @@ public class M2TestLoginListener implements Listener {
     /**
      * PlayerLoginイベント処理
      * プレイヤーログイン時のイベントについて実装する
+     *
      * @param event ログインイベント情報
      */
     @EventHandler
@@ -33,6 +35,7 @@ public class M2TestLoginListener implements Listener {
     /**
      * PlayerJoinイベント処理
      * プレイヤーログイン後のイベントについて実装する
+     *
      * @param event JOINイベント情報
      */
     @EventHandler

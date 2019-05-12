@@ -34,17 +34,17 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         // コマンドをここに登録
         // plugin.yml への記載も忘れずに！
         // ----------------------------------------
-        MHCommand cmd=new MHCommand(this);
+        MHCommand cmd = new MHCommand(this);
         this.getCommand("m2test").setExecutor(new M2TestCommand(this));
         this.getCommand("mh").setExecutor(cmd);
 
         // ----------------------------------------
         // イベントリスナーをここに登録
         // ----------------------------------------
-        this.getServer().getPluginManager().registerEvents( new M2TestLoginListener(this), this);
-        this.getServer().getPluginManager().registerEvents( new PlayerDamageListener(this), this);
-        this.getServer().getPluginManager().registerEvents( new NexusDamage(this,cmd), this);
-        this.getServer().getPluginManager().registerEvents( new Scouter(), this);
+        this.getServer().getPluginManager().registerEvents(new M2TestLoginListener(this), this);
+        this.getServer().getPluginManager().registerEvents(new PlayerDamageListener(this), this);
+        this.getServer().getPluginManager().registerEvents(new NexusDamage(this, cmd), this);
+        this.getServer().getPluginManager().registerEvents(new Scouter(), this);
     }
 
 

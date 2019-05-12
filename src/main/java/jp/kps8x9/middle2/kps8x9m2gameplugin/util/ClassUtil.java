@@ -12,6 +12,6 @@ public class ClassUtil {
 
     public static String getLogInfo() {
         return Thread.currentThread().getStackTrace()[2].getClassName() + "#" +
-        Thread.currentThread().getStackTrace()[2].getMethodName() + " ";
+                Thread.currentThread().getStackTrace()[2].getMethodName() + " ";
     }
 }
