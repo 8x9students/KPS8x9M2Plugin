@@ -54,6 +54,9 @@ public class MHCommand implements CommandExecutor {
                         break;
                     case "wave":
                         sender.sendMessage(ChatColor.LIGHT_PURPLE + "WAVE " + mhGame.wave + " !!");
+                        break;
+                    case "spawnpoint":
+                        ret = new MH_spawnpoint(this.plg, this).onCommand(sender, command, label, args);
                     default:
                         sender.sendMessage(ChatColor.RED + "/mh 内容");
                         break;
@@ -77,7 +80,7 @@ public class MHCommand implements CommandExecutor {
                         break;
                 }
             } else if (args.length == 4 && args[0].equalsIgnoreCase("spawnpoint"))
-                new MH_spawnpoint(Double.parseDouble(args[1]), Double.parseDouble(args[2]), Double.parseDouble(args[3]));
+                new MH_spawnpoint(this.plg, this).onCommand(sender, command, label, args);
             else {
                 sender.sendMessage(ChatColor.RED + "/mh 内容");
             }
