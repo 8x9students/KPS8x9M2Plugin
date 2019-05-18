@@ -6,6 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
+import static com.sun.javafx.binding.Logging.getLogger;
+
 public final class KPS8x9M2gamePlugin extends JavaPlugin {
 
     @Override

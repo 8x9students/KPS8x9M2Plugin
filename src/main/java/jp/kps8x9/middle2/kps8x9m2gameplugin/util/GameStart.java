@@ -13,7 +13,7 @@ import org.bukkit.inventory.PlayerInventory;
 
 
 public class GameStart implements CommandExecutor {
-    ItemStack sword = new ItemStack(Material.IRON_SWORD);
+    ItemStack sword = new ItemStack(Material.IRON_SzWORD);
     ItemStack shield = new ItemStack(Material.SHIELD);
     ItemStack gapple = new ItemStack(Material.GOLDEN_APPLE,3);
     ItemStack food = new ItemStack(Material.COOKED_BEEF,64);

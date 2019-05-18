@@ -1,3 +1,5 @@
 # User-specific stuff
-
+.idea/workspace.xml
+.idea/misc.xml
+.idea/libraries/
 target/
