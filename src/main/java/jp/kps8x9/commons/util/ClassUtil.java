@@ -1,4 +1,4 @@
-package jp.kps8x9.middle2.kps8x9m2gameplugin.util;
+package jp.kps8x9.commons.util;
 
 public class ClassUtil {
 
@@ -12,6 +12,6 @@ public class ClassUtil {
 
     public static String getLogInfo() {
         return Thread.currentThread().getStackTrace()[2].getClassName() + "#" +
-        Thread.currentThread().getStackTrace()[2].getMethodName() + " ";
+                Thread.currentThread().getStackTrace()[2].getMethodName() + " ";
     }
 }
