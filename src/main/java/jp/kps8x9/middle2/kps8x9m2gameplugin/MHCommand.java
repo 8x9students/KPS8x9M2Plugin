@@ -57,6 +57,8 @@ public class MHCommand implements CommandExecutor {
                         break;
                     case "spawnpoint":
                         ret = new MH_spawnpoint(this.plg, this).onCommand(sender, command, label, args);
+                        sender.sendMessage(ChatColor.GREEN + "スポーンポイントを設定しました。");
+                        break;
                     default:
                         sender.sendMessage(ChatColor.RED + "/mh 内容");
                         break;
@@ -79,9 +81,10 @@ public class MHCommand implements CommandExecutor {
                         sender.sendMessage(ChatColor.RED + "/mh 内容");
                         break;
                 }
-            } else if (args.length == 4 && args[0].equalsIgnoreCase("spawnpoint"))
-                new MH_spawnpoint(this.plg, this).onCommand(sender, command, label, args);
-            else {
+            } else if (args.length == 4 && args[0].equalsIgnoreCase("spawnpoint")){
+                ret = new MH_spawnpoint(this.plg, this).onCommand(sender, command, label, args);
+                sender.sendMessage(ChatColor.GREEN + "スポーンポイントを現在地に設定しました。");
+            }else {
                 sender.sendMessage(ChatColor.RED + "/mh 内容");
             }
         }catch (Exception e){
