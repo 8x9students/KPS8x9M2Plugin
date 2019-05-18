@@ -17,26 +17,44 @@ public class MHGame {
     private BukkitTask timer;//タイマー
     private int color_num;
 
-    private static MHGame mhGame=new MHGame();
+    private static MHGame mhGame=new MHGame(1);
 
-    private MHGame(){}
+    private MHGame(int wave){
+        this.wave = wave;
+    }
 
     public static MHGame getInstance(){
         return mhGame;
     }
 
-    public void waveDown(){ //waveを上げる
-        wave--;
+    public void waveDown(){ //waveを下げる
+        if(this.wave<=1) {
+            this.wave = 1;
+        }else if(this.wave>1000) {
+            this.wave = 1000;
+        }else{
+            this.wave--;
+        }
     }
 
-    public void waveUp(){ //waveを下げる
-        wave++;
+    public void waveUp(){ //waveを上げる
+        if(this.wave>=1000) {
+            this.wave = 1000;
+        }else if(this.wave<1) {
+            this.wave = 1;
+        }else{
+            this.wave++;
+        }
     }
 
     public void setWave(int wave){ //waveを設定する
-        if(wave<0)
-            wave=1;
-        this.wave=wave;
+        if(wave<0) {
+            this.wave = 1;
+        }else if(wave>1000) {
+            this.wave =1000;
+        }else {
+            this.wave = wave;
+        }
     }
 
     //タイマー起動
