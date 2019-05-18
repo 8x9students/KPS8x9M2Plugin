@@ -6,7 +6,7 @@ commands:
   m2test:
     description: M2Test
     usage: /m2test
-  finsh:
+  finish:
     usge: /finish
   mh:
     description: MH_command
