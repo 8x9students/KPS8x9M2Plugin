@@ -8,3 +8,6 @@ commands:
     usage: /m2test
   finsh:
     usge: /finish
+  mh:
+    description: MH_command
+    usage: /mh
