@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KPS8x9M2gamePlugin.iml" filepath="$PROJECT_DIR$/KPS8x9M2gamePlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KPS8x9M2Plugin.iml" filepath="$PROJECT_DIR$/KPS8x9M2Plugin.iml" />
     </modules>
   </component>
 </project>
