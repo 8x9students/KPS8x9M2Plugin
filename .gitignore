@@ -1,6 +1,10 @@
 # User-specific stuff
+.idea/libraries/*.xml
+.idea/compiler.xml
 .idea/misc.xml
+.idea/modules.xml
 .idea/workspace.xml
-.idea/libraries/
+.idea/*.iml
 target/
-pom.properties
+pom_conf.properties
+*.iml

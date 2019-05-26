@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>jp.kps8x9.middle2</groupId>
-    <artifactId>KPS8x9M2gamePlugin</artifactId>
+    <artifactId>KPS8x9M2Plugin</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>KPS8x9M2gamePlugin</name>
+    <name>KPS8x9M2Plugin</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +30,7 @@
                         </goals>
                         <configuration>
                             <files>
-                                <file>pom.properties</file>
+                                <file>pom_conf.properties</file>
                             </files>
                         </configuration>
                     </execution>
