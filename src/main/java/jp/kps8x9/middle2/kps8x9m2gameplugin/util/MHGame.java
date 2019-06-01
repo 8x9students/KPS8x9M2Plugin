@@ -1,12 +1,18 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin.util;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BossBar;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
+
+import java.util.HashMap;
+import java.util.UUID;
 
 public class MHGame {
 
@@ -16,6 +22,9 @@ public class MHGame {
     public int second;//秒
     private BukkitTask timer;//タイマー
     private int color_num;
+    public ShopKeeper shopKeeper;
+    public Inventory editInv;
+    private HashMap<Player,Integer> coinmap=new HashMap<>();
 
     private static MHGame mhGame=new MHGame(1);
 
@@ -55,6 +64,17 @@ public class MHGame {
         }else {
             this.wave = wave;
         }
+    }
+
+    public int getCoin(Player p){
+        if(!coinmap.containsKey(p)){
+            return 0;
+        }
+        return coinmap.get(p);
+    }
+
+    public void setCoin(Player p,int coin){
+        coinmap.put(p,coin);
     }
 
     //タイマー起動

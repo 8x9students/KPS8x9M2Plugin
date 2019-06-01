@@ -4,6 +4,8 @@ import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.MHCommand;
 import jp.kps8x9.commons.util.ClassUtil;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ShopItem;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ShopKeeper;
 import org.bukkit.*;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
@@ -75,6 +77,13 @@ public class MH_start {
         }
 
         mhGame.startTimer(plg);
+
+        mhGame.shopKeeper=new ShopKeeper(plg,new Location(((Player)sender).getWorld(),config.getDouble("ShopKeeperLocation.x"),config.getDouble("ShopKeeperLocation.y"),config.getDouble("ShopKeeperLocation.z")));
+        mhGame.shopKeeper.addItem(new ShopItem[]{
+                new ShopItem(new ItemStack(Material.DIAMOND_AXE),25),
+                new ShopItem(new ItemStack(Material.SNOWBALL,10),10),
+                new ShopItem(new ItemStack(Material.IRON_HOE),15),
+        });
 
         mhGame.bossbar=Bukkit.createBossBar(ChatColor.RED+"NEXUS HP", BarColor.PURPLE, BarStyle.SOLID);
         mhGame.bossbar.setProgress(1.0);
