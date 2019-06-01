@@ -11,12 +11,10 @@ import static jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin.*;
 
 public class NexusDamage implements Listener {
     private final KPS8x9M2gamePlugin plugin;
-    private final MHCommand cmd;
     private final MHGame mhGame;
 
-    public NexusDamage(KPS8x9M2gamePlugin plugin,MHCommand cmd){
+    public NexusDamage(KPS8x9M2gamePlugin plugin){
         this.plugin=plugin;
-        this.cmd=cmd;
         this.mhGame=MHGame.getInstance();
     }
 
