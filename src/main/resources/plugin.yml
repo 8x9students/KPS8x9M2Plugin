@@ -6,14 +6,11 @@ commands:
   m2test:
     description: M2Test
     usage: /m2test
-  start:
-    description: 開始
-    mh:
-      description: MH_command
-      usage: /mh
-
-    finish:
-      usge: /finish
+  mh:
+    description: MH_command
+    usage: /mh
+  finish:
+    usge: /finish
 
 permissions:
   itazura:
