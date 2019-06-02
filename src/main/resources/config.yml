@@ -2,6 +2,10 @@ NexusLocation:
   x:
   y:
   z:
+ShopKeeperLocation:
+  x:
+  y:
+  z:
 NexusHp:
 NexusTimer:
   Minute:

@@ -59,6 +59,9 @@ public class MHCommand implements CommandExecutor {
                         ret = new MH_spawnpoint(this.plg, this).onCommand(sender, command, label, args);
                         sender.sendMessage(ChatColor.GREEN + "スポーンポイントを設定しました。");
                         break;
+                    case "coin":
+                        ret=new MH_coin(this.plg,this).onCommand(sender,command,label,args);
+                        break;
                     default:
                         sender.sendMessage(ChatColor.RED + "/mh 内容");
                         break;

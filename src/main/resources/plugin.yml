@@ -6,12 +6,12 @@ commands:
   m2test:
     description: M2Test
     usage: /m2test
+  start:
+    description: start
+    usage: /start
   mh:
     description: MH_command
     usage: /mh
   finish:
+    description: finish
     usge: /finish
-
-permissions:
-  itazura:
-    default: op
