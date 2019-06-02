@@ -13,7 +13,7 @@ public class ShopItem {
         this.itm=itm;
         this.price=price;
         ItemMeta meta=itm.getItemMeta();
-        meta.setLore(Collections.singletonList(price+"ゴールド"));
+        meta.setLore(Collections.singletonList(price+"コイン"));
         itm.setItemMeta(meta);
     }
 
@@ -26,7 +26,7 @@ public class ShopItem {
             price=0;
         this.price=price;
         ItemMeta meta=itm.getItemMeta();
-        meta.setLore(Collections.singletonList(price+"ゴールド"));
+        meta.setLore(Collections.singletonList(price+"コイン"));
         itm.setItemMeta(meta);
     }
 

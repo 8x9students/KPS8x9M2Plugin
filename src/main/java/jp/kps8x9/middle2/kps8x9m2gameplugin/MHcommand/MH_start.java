@@ -78,7 +78,7 @@ public class MH_start {
 
         mhGame.startTimer(plg);
 
-        mhGame.shopKeeper=new ShopKeeper(plg,new Location(((Player)sender).getWorld(),config.getDouble("ShopKeeperLocation.x"),config.getDouble("ShopKeeperLocation.y"),config.getDouble("ShopKeeperLocation.z")));
+        new ShopKeeper(plg,new Location(((Player)sender).getWorld(),config.getDouble("ShopKeeperLocation.x"),config.getDouble("ShopKeeperLocation.y"),config.getDouble("ShopKeeperLocation.z")));
         mhGame.shopKeeper.addItem(new ShopItem[]{
                 new ShopItem(new ItemStack(Material.DIAMOND_AXE),25),
                 new ShopItem(new ItemStack(Material.SNOWBALL,10),10),

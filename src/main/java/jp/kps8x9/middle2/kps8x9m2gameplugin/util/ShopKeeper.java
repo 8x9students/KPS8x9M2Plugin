@@ -1,5 +1,6 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin.util;
 
+import jp.kps8x9.middle2.kps8x9m2gameplugin.Event.SetShopItems;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -31,6 +32,8 @@ public class ShopKeeper implements Listener {
 
         keeper= (LivingEntity) loc.getWorld().spawnEntity(loc, EntityType.BLAZE);
         keeper.setAI(false);
+        MHGame.getInstance().shopKeeper=this;
+        SetShopItems.setShopKeeper(this);
         inv= Bukkit.createInventory(null,54, ChatColor.RED+"SHOP");
     }
 
@@ -74,7 +77,6 @@ public class ShopKeeper implements Listener {
     public void removeItem(ShopItem itm){
         //インベントリを空にする
         inv.clear();
-        Bukkit.broadcastMessage(inv.getContents().toString());
         //ショップのアイテムを更新
         shopItems.remove(itm);
         //shopItemsを配列に変換
@@ -101,12 +103,7 @@ public class ShopKeeper implements Listener {
         if(e.getRightClicked()!=keeper) return;
         Player p=e.getPlayer();
         if(!p.isOp()||!p.isSneaking()) {
-            inv.clear();
-            ItemStack[] itms=new ItemStack[shopItems.size()];
-            for (int i=0;i<shopItems.size();i++){
-                itms[i]=shopItems.get(i).getItemStack();
-            }
-            inv.addItem(itms);
+            updateInventory();
             p.openInventory(inv);
         }
     }

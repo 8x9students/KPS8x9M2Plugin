@@ -3,9 +3,11 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin.Event;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ShopItem;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.ShopKeeper;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,6 +24,7 @@ import java.util.HashMap;
 public class SetShopItems implements Listener {
     private final KPS8x9M2gamePlugin plg;
     private final MHGame mhGame;
+    private static ShopKeeper shopKeeper;
     private Inventory editmodeinv;//編集インベントリ
     private HashMap<Player,Inventory> priceinvs=new HashMap<>();//値段変更インベントリ
     private HashMap<Player,ItemStack> clickitmdata=new HashMap<>();//選択したアイテムの保存
@@ -63,19 +66,29 @@ public class SetShopItems implements Listener {
         editmodeinv.setItem(6,delete);
     }
 
+    public static void setShopKeeper(ShopKeeper keeper){
+        shopKeeper=keeper;
+    }
+
     @EventHandler
     public void Click(PlayerInteractEntityEvent e){
-        if(e.getRightClicked()!=mhGame.shopKeeper.getKeeper()) return;//ショップキーパーのインベントリかどうか
+        if(e.getRightClicked()!=shopKeeper.getKeeper()) return;
         Player p=e.getPlayer();
         if(p.isOp()&&p.isSneaking()) {//スニークしているかどうか
-            //編集インベントリの更新
-            mhGame.editInv.clear();
-            ItemStack[] itms=new ItemStack[mhGame.shopKeeper.getShopItems().size()];
-            for (int i=0;i<mhGame.shopKeeper.getShopItems().size();i++){
-                itms[i]=mhGame.shopKeeper.getShopItems().get(i).getItemStack();
+            if(p.getInventory().getItemInMainHand().getType()!=Material.AIR){//アイテムの追加かどうか
+                shopKeeper.addItem(new ShopItem[]{
+                        new ShopItem(p.getInventory().getItemInMainHand(),0)
+                });
+            }else {
+                //編集インベントリの更新
+                mhGame.editInv.clear();
+                ItemStack[] itms = new ItemStack[shopKeeper.getShopItems().size()];
+                for (int i = 0; i < shopKeeper.getShopItems().size(); i++) {
+                    itms[i] = shopKeeper.getShopItems().get(i).getItemStack();
+                }
+                mhGame.editInv.addItem(itms);
+                p.openInventory(mhGame.editInv);
             }
-            mhGame.editInv.addItem(itms);
-            p.openInventory(mhGame.editInv);
         }
     }
 
@@ -111,14 +124,14 @@ public class SetShopItems implements Listener {
                 priceinvs.put(p,priceinv);
                 p.openInventory(priceinv);
             }else if(meta.equals(deletem)){//削除
-                mhGame.shopKeeper.removeItem(mhGame.shopKeeper.getShopItem(clickitmdata.get(p)));
+                shopKeeper.removeItem(shopKeeper.getShopItem(clickitmdata.get(p)));
                 p.closeInventory();
             }
         }else if(priceinvs.containsKey(p)&&e.getClickedInventory().equals(priceinvs.get(p))){//値段変更インベントリ
             e.setCancelled(true);
             ItemMeta meta=e.getCurrentItem().getItemMeta();
 
-            if(meta.equals(price_ok.getItemMeta())){//完了ボタン
+            if(meta.equals(price_ok.getItemMeta())){//値段変更完了ボタン
                 Inventory inv=e.getClickedInventory();
                 StringBuilder price_str=new StringBuilder("0");//何も入力されてない場合の0
                 //値を保存
@@ -127,9 +140,9 @@ public class SetShopItems implements Listener {
                     price_str.append(inv.getItem(i).getItemMeta().getDisplayName());
                 }
                 //値段を変更
-                mhGame.shopKeeper.getShopItem(clickitmdata.get(p)).setPrice(Integer.parseInt(price_str.toString()));
+                shopKeeper.getShopItem(clickitmdata.get(p)).setPrice(Integer.parseInt(price_str.toString()));
                 //インベントリを更新
-                mhGame.shopKeeper.updateInventory();
+                shopKeeper.updateInventory();
                 p.closeInventory();
             }else {//その他
                 ItemMeta[] numbermeta = new ItemMeta[numbers.length];
