@@ -6,23 +6,12 @@ commands:
   m2test:
     description: M2Test
     usage: /m2test
-<<<<<<< Updated upstream
   start:
     description: start
     usage: /start
-=======
->>>>>>> Stashed changes
   mh:
     description: MH_command
     usage: /mh
   finish:
-<<<<<<< Updated upstream
     description: finish
-    usge: /finish
-=======
-    usge: /finish
-
-permissions:
-  itazura:
-    default: op
->>>>>>> Stashed changes
+    usage: /finish
