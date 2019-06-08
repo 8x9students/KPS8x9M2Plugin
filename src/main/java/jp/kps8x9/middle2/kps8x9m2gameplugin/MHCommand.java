@@ -36,6 +36,9 @@ public class MHCommand implements CommandExecutor {
             if (args.length == 1) {
                 switch (args[0].toLowerCase()) {
                     //それぞれのクラスへ移動
+                    case "start":
+                        ret=new MH_start(plg,this).onCommand(sender, command, label, args);
+                        break;
                     case "end":
                         ret = new MH_end(this.plg, this).onCommand(sender, command, label, args);
                         break;
@@ -70,9 +73,6 @@ public class MHCommand implements CommandExecutor {
             } else if (args.length == 2) {
                 switch (args[0].toLowerCase()) {
                     //それぞれのクラスへ移動
-                    case "start":
-                        ret=new MH_start(plg,this).onCommand(sender, command, label, args);
-                        break;
                     case "sethp":
                         ret=new MH_sethp(plg,this).onCommand(sender,command,label,args);
                         break;

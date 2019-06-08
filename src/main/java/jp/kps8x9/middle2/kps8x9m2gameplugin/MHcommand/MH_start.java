@@ -34,7 +34,7 @@ public class MH_start {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         plg.getLogger().info(ClassUtil.getLogInfo());
 
-        mhGame.wave=Integer.parseInt(args[1]);
+        mhGame.wave=1;
         boolean ret=false;
 
         try {
