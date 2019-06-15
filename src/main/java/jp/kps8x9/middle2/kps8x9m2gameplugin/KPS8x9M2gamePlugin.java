@@ -2,9 +2,6 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.middle2.kps8x9m2gameplugin.Event.SetShopItems;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.Event.ShopBuy;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.MHcommand.MH_Items;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.Utility.Item_Effect;
-import jp.kps8x9.middle2.kps8x9m2gameplugin.util.GameStart;
 import java.util.Objects;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.Event.NexusDamage;
 import jp.kps8x9.commons.util.ClassUtil;
@@ -34,7 +31,6 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
 
         MHCommand cmd = new MHCommand(this);
         this.getCommand("m2test").setExecutor(new M2TestCommand(this));
-        this.getCommand("start").setExecutor(new GameStart());
         this.getCommand("mh").setExecutor(new MHCommand(this));
         this.getCommand("finish").setExecutor(new FinishEvent(this));
 
@@ -47,7 +43,6 @@ public final class KPS8x9M2gamePlugin extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new Scouter(), this);
         this.getServer().getPluginManager().registerEvents(new SetShopItems(this), this);
         this.getServer().getPluginManager().registerEvents(new ShopBuy(this), this);
-        this.getServer().getPluginManager().registerEvents(new Item_Effect(),this);
     }
 
 

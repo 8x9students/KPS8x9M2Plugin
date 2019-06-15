@@ -1,3 +1,7 @@
+package jp.kps8x9.middle2.kps8x9m2gameplugin.Event;
+
+import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.MHCommand;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;

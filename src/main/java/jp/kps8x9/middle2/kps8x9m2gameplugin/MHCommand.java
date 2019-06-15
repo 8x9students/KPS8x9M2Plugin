@@ -64,8 +64,6 @@ public class MHCommand implements CommandExecutor {
                     case "coin":
                         ret=new MH_coin(this.plg,this).onCommand(sender,command,label,args);
                         break;
-                    case "Items":
-                        ret = new MH_Items(plg, this).onCommand(sender, command, label, args);
                     default:
                         sender.sendMessage(ChatColor.RED + "/mh 内容");
                         break;
