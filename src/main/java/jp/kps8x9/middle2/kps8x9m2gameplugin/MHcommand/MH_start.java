@@ -34,6 +34,7 @@ public class MH_start {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         plg.getLogger().info(ClassUtil.getLogInfo());
 
+        mhGame.clear();
         mhGame.wave=1;
         boolean ret=false;
 
@@ -41,6 +42,7 @@ public class MH_start {
             World w=((Player)sender).getWorld();
             mhGame.nexus = (LivingEntity) w.spawnEntity(new Location(w, config.getDouble("NexusLocation.x"), config.getDouble("NexusLocation.y"), config.getDouble("NexusLocation.z")), EntityType.CREEPER);
             mhGame.nexus.setAI(false);
+            mhGame.nexus.setGlowing(true);
             int hp=config.getInt("NexusHp");
             mhGame.nexus.setMaxHealth(hp);
             mhGame.nexus.setHealth(hp);
@@ -78,12 +80,14 @@ public class MH_start {
 
         mhGame.startTimer(plg);
 
-        new ShopKeeper(plg,new Location(((Player)sender).getWorld(),config.getDouble("ShopKeeperLocation.x"),config.getDouble("ShopKeeperLocation.y"),config.getDouble("ShopKeeperLocation.z")));
-        mhGame.shopKeeper.addItem(new ShopItem[]{
-                new ShopItem(new ItemStack(Material.DIAMOND_AXE),25),
-                new ShopItem(new ItemStack(Material.SNOWBALL,10),10),
-                new ShopItem(new ItemStack(Material.IRON_HOE),15),
-        });
+        if(mhGame.shopKeeper==null) {
+            new ShopKeeper(plg, new Location(((Player) sender).getWorld(), config.getDouble("ShopKeeperLocation.x"), config.getDouble("ShopKeeperLocation.y"), config.getDouble("ShopKeeperLocation.z")));
+            mhGame.shopKeeper.addItem(new ShopItem[]{
+                    new ShopItem(new ItemStack(Material.DIAMOND_AXE), 25),
+                    new ShopItem(new ItemStack(Material.SNOWBALL, 10), 10),
+                    new ShopItem(new ItemStack(Material.IRON_HOE), 15),
+            });
+        }
 
         mhGame.bossbar=Bukkit.createBossBar(ChatColor.RED+"NEXUS HP", BarColor.PURPLE, BarStyle.SOLID);
         mhGame.bossbar.setProgress(1.0);

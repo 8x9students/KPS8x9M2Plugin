@@ -18,8 +18,10 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class SetShopItems implements Listener {
     private final KPS8x9M2gamePlugin plg;
@@ -31,6 +33,8 @@ public class SetShopItems implements Listener {
     private ItemMeta pricem,deletem;//値段変更、削除
     private ItemStack price_ok;//値段変更完了ボタン
     private ItemStack[] numbers=new ItemStack[10];
+
+    private List<Player> click=new ArrayList<>();//エンティティークリックイベントが２回発動されるのでそれを防ぐ
 
     public SetShopItems(KPS8x9M2gamePlugin plg){
         this.plg=plg;
@@ -76,9 +80,14 @@ public class SetShopItems implements Listener {
         Player p=e.getPlayer();
         if(p.isOp()&&p.isSneaking()) {//スニークしているかどうか
             if(p.getInventory().getItemInMainHand().getType()!=Material.AIR){//アイテムの追加かどうか
-                shopKeeper.addItem(new ShopItem[]{
-                        new ShopItem(p.getInventory().getItemInMainHand(),0)
-                });
+                if(!click.contains(p)) {
+                    shopKeeper.addItem(new ShopItem[]{
+                            new ShopItem(p.getInventory().getItemInMainHand(), 0)
+                    });
+                    click.add(p);
+                }else{
+                    click.remove(p);
+                }
             }else {
                 //編集インベントリの更新
                 mhGame.editInv.clear();

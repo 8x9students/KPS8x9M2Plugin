@@ -5,6 +5,7 @@ import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -60,6 +61,16 @@ public class ShopKeeper implements Listener {
     }
 
     public void addItem(ShopItem[] itms){
+        List<Material> shopitm_tmp=new ArrayList<>();
+        for(ShopItem itm:shopItems){
+            shopitm_tmp.add(itm.getItemStack().getType());
+        }
+        for(ShopItem itm:itms){
+            if(shopitm_tmp.contains(itm.getItemStack().getType())){
+                System.out.println("既にそのアイテムは追加されています");
+                return;
+            }
+        }
         //item_listを配列に変換
         ItemStack[] itms_array=new ItemStack[itms.length];
         for(int index=0;index<itms.length;index++){

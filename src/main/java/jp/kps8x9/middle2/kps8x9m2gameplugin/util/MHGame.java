@@ -21,6 +21,7 @@ public class MHGame {
     public LivingEntity nexus;//ネクサス
     public int second;//秒
     private BukkitTask timer;//タイマー
+    private BukkitTask finishtask;
     private int color_num;
     public ShopKeeper shopKeeper;
     public Inventory editInv;
@@ -97,6 +98,11 @@ public class MHGame {
 
         bossbar.setProgress(1.0);
 
+        if(!nexus.isDead()) {
+            nexus.setHealth(0);
+        }
+        nexus=null;
+
         timer.cancel();
 
         StringBuilder title=new StringBuilder()
@@ -111,7 +117,7 @@ public class MHGame {
 
         BarColor[] colors=BarColor.values();
         color_num=0;
-        new BukkitRunnable(){
+        finishtask=new BukkitRunnable(){
             @Override
             public void run() {
                 bossbar.setColor(colors[color_num]);
@@ -120,5 +126,12 @@ public class MHGame {
                     color_num=0;
             }
         }.runTaskTimer(plg,4,4);
+    }
+
+    public void clear(){
+        if(finishtask!=null)
+            finishtask.cancel();
+        if(bossbar!=null)
+            bossbar.removeAll();
     }
 }

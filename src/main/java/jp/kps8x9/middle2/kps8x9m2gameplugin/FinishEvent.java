@@ -1,6 +1,7 @@
 package jp.kps8x9.middle2.kps8x9m2gameplugin;
 
 import jp.kps8x9.commons.util.ClassUtil;
+import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -23,10 +24,14 @@ public class FinishEvent implements CommandExecutor {
         World world = ((Player)sender).getWorld();
         for(LivingEntity entity : world.getLivingEntities()){
             if(entity instanceof Monster){
-                double damage = 100.0;
-                entity.damage(damage);
+                if(entity!=MHGame.getInstance().shopKeeper.getKeeper()) {
+                    double damage = 100.0;
+                    entity.damage(damage);
+                }
             }
         }
+
+        MHGame.getInstance().finish(plg);
         return false;
     }
 }

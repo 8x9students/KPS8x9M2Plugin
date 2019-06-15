@@ -3,7 +3,9 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin.Event;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.MHCommand;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.util.MHGame;
+import org.bukkit.GameMode;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -20,12 +22,13 @@ public class NexusDamage implements Listener {
 
     @EventHandler
     private void nexusdamage(EntityDamageByEntityEvent e){
-        if(e.getEntity()==mhGame.nexus&&e.getDamager().getType()== EntityType.PLAYER&&!e.getDamager().isOp()){
+        if((e.getEntity()==mhGame.nexus||e.getEntity()==mhGame.shopKeeper.getKeeper())&&e.getDamager().getType()== EntityType.PLAYER&&!((Player)e.getDamager()).getGameMode().equals(GameMode.CREATIVE)){
             e.setCancelled(true);
             return;
         }
-        if(e.getEntity()!=mhGame.nexus)
+        if(e.getEntity()!=mhGame.nexus) {
             return;
+        }
         if(mhGame.nexus.getHealth()-e.getDamage()<=0) {
             mhGame.finish(plugin);
             return;

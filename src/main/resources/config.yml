@@ -6,7 +6,7 @@ ShopKeeperLocation:
   x:
   y:
   z:
-NexusHp:
+NexusHp: 200
 NexusTimer:
-  Minute:
-  Second:
+  Minute: 20
+  Second: 0

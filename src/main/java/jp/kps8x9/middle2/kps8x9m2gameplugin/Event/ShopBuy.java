@@ -45,6 +45,6 @@ public class ShopBuy implements Listener {
             return;
         }
         mhGame.setCoin(buyer,mhGame.getCoin(buyer)-cost);
-        buyer.getInventory().addItem(new ItemStack(itm.getType(),itm.getAmount()));//購入したアイテムを渡す
+        buyer.getInventory().addItem(itm.clone());//購入したアイテムを渡す
     }
 }
