@@ -3,6 +3,7 @@ package jp.kps8x9.middle2.kps8x9m2gameplugin.util;
 import jp.kps8x9.middle2.kps8x9m2gameplugin.KPS8x9M2gamePlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BossBar;
 import org.bukkit.entity.LivingEntity;
@@ -26,6 +27,7 @@ public class MHGame {
     public ShopKeeper shopKeeper;
     public Inventory editInv;
     private HashMap<Player,Integer> coinmap=new HashMap<>();
+    private Location nexus_loc=null,shopkeeper_loc=null;
 
     private static MHGame mhGame=new MHGame(1);
 
@@ -76,6 +78,22 @@ public class MHGame {
 
     public void setCoin(Player p,int coin){
         coinmap.put(p,coin);
+    }
+
+    public void setNexus_loc(Location loc){
+        nexus_loc=loc;
+    }
+
+    public Location getNexus_loc(){
+        return nexus_loc;
+    }
+
+    public void setShopKeeper_loc(Location loc){
+        shopkeeper_loc=loc;
+    }
+
+    public Location getShopkeeper_loc(){
+        return shopkeeper_loc;
     }
 
     //タイマー起動

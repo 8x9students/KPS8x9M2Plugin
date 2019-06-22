@@ -34,13 +34,18 @@ public class MH_start {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         plg.getLogger().info(ClassUtil.getLogInfo());
 
+        if(mhGame.getNexus_loc()==null||mhGame.getShopkeeper_loc()==null){
+            sender.sendMessage(ChatColor.RED+"ネクサスもしくはショップキーパーのスポーン位置を設定してください");
+            return false;
+        }
+
         mhGame.clear();
         mhGame.wave=1;
         boolean ret=false;
 
         try {
             World w=((Player)sender).getWorld();
-            mhGame.nexus = (LivingEntity) w.spawnEntity(new Location(w, config.getDouble("NexusLocation.x"), config.getDouble("NexusLocation.y"), config.getDouble("NexusLocation.z")), EntityType.CREEPER);
+            mhGame.nexus = (LivingEntity) w.spawnEntity(mhGame.getNexus_loc(), EntityType.CREEPER);
             mhGame.nexus.setAI(false);
             mhGame.nexus.setGlowing(true);
             int hp=config.getInt("NexusHp");
@@ -81,7 +86,7 @@ public class MH_start {
         mhGame.startTimer(plg);
 
         if(mhGame.shopKeeper==null) {
-            new ShopKeeper(plg, new Location(((Player) sender).getWorld(), config.getDouble("ShopKeeperLocation.x"), config.getDouble("ShopKeeperLocation.y"), config.getDouble("ShopKeeperLocation.z")));
+            new ShopKeeper(plg, mhGame.getShopkeeper_loc());
             mhGame.shopKeeper.addItem(new ShopItem[]{
                     new ShopItem(new ItemStack(Material.DIAMOND_AXE), 25),
                     new ShopItem(new ItemStack(Material.SNOWBALL, 10), 10),

@@ -1,11 +1,3 @@
-NexusLocation:
-  x:
-  y:
-  z:
-ShopKeeperLocation:
-  x:
-  y:
-  z:
 NexusHp: 200
 NexusTimer:
   Minute: 20

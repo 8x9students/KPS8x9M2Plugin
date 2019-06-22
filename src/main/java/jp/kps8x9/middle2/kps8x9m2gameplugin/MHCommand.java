@@ -79,6 +79,13 @@ public class MHCommand implements CommandExecutor {
                             mhGame.setWave(Integer.parseInt(args[1]));
                         }
                         break;
+                    case "spawnpoint":
+                        if(args[1].equalsIgnoreCase("nexus")){
+                            ret=new MH_nexus_spawnpoint(plg,this).onCommand(sender,command,label,args);
+                        }else if(args[1].equalsIgnoreCase("shop")){
+                            ret=new MH_shopkepper_spawnpoint(plg,this).onCommand(sender,command,label,args);
+                        }
+                        break;
                     default:
                         sender.sendMessage(ChatColor.RED + "/mh 内容");
                         break;
